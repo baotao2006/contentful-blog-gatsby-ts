@@ -41,8 +41,10 @@
     "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "clean": "gatsby clean",
+    "dev": "npm run clean && gatsby develop",
     "build": "gatsby build",
+    "troubleshoot": "rm -rf .cache node_modules public package-lock.json && npm i && npm run dev",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "postinstall": "node ./bin/hello.js",
