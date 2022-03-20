@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noEmit": true,
+    "pretty": true,
+    /* 跳过声明文件的类型检查。 */
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "include": ["./src", "gatsby"],
+  "exclude": ["./node_modules", "./public", "./.cache"]
+}

@@ -1,30 +1,37 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import type { PageProps } from 'gatsby';
 
+import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import ArticlePreview from '../components/ArticlePreview'
 
-const RootIndex = ({location, data}) => {
+// types
+import type { BlogPost} from '../types/types';
+
+type GraphQLResult = {
+  allContentfulBlogPost: {
+    nodes: BlogPost[];
+  };
+};
+
+const BlogIndex=({location, data}: PageProps<GraphQLResult>) => {
   const posts = data.allContentfulBlogPost.nodes
-  const [author] = data.allContentfulPerson.nodes
 
   return (
     <Layout location={location}>
-      <Hero
-        image={author.heroImage.gatsbyImageData}
-        title={author.name}
-        content={author.shortBio.shortBio}
-      />
+      <Seo title="Blog" />
+      <Hero title="Blog" />
       <ArticlePreview posts={posts} />
     </Layout>
   )
 }
 
-export default RootIndex
+export default BlogIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query BlogIndexQuery {
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
@@ -43,24 +50,6 @@ export const pageQuery = graphql`
           childMarkdownRemark {
             html
           }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      nodes {
-        name
-        shortBio {
-          shortBio
-        }
-        title
-        heroImage: image {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 1180
-          )
         }
       }
     }

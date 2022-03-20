@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import type { PageProps } from 'gatsby';
 
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
@@ -7,7 +8,16 @@ import Hero from '../components/Hero'
 import Tags from '../components/Tags'
 import * as styles from './blog-post.module.css'
 
-const BlogPostTemplate = ({location, data}) => {
+// types
+import type { NextPrevious, SingleBlogPost } from '../types/types';
+
+type GraphQLResult = {
+  contentfulBlogPost: SingleBlogPost;
+  next: NextPrevious;
+  previous: NextPrevious;
+};
+
+const BlogPostTemplate = ({location, data}: PageProps<GraphQLResult>) => {
   const post = data.contentfulBlogPost
   const previous = data.previous
   const next = data.next
