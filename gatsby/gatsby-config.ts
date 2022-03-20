@@ -13,7 +13,7 @@ if (process.env.CONTENTFUL_HOST) {
 	contentfulConfig.host = process.env.CONTENTFUL_HOST;
 	contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
 }
-console.log(contentfulConfig);
+
 
 const { spaceId, accessToken } = contentfulConfig;
 

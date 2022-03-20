@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc9f6a0e-dce1-46ac-8081-4fc9674bc6e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gatsby/gatsby-config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby/gatsby-node.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="krob1e3a" />
+  </component>
+  <component name="ProjectId" id="26bnsf3lNDHcmG9FtpyKQczHG9L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../contentful-blog-gatsby-starter-ts" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\gatsby" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\templates" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Tags" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Navigation" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Hero" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Seo" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Layout" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Tags" />
+      <recent name="D:\ubuntu1804\gatsby\contentful-blog-gatsby-ts\src\components\Navigation" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc9f6a0e-dce1-46ac-8081-4fc9674bc6e3" name="Default Changelist" comment="" />
+      <created>1647701362311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647701362311</updated>
+      <workItem from="1647701367117" duration="2008000" />
+      <workItem from="1647734893316" duration="21002000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/pages/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/blog.js" />
+        <option value="$PROJECT_DIR$/src/types/types.js" />
+        <option value="$PROJECT_DIR$/src/styles/theme.js" />
+        <option value="$PROJECT_DIR$/src/styles/GlobalStyle.js" />
+        <option value="$PROJECT_DIR$/src/templates/styles.js" />
+        <option value="$PROJECT_DIR$/src/templates/blog-post.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Container.js" />
+        <option value="$PROJECT_DIR$/src/components/Seo/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Hero/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Hero/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/Tags/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Tags/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Footer/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/ArticlePreview/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ArticlePreview/styles.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
