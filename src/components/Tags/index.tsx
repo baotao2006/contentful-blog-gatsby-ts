@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import * as styles from './tags.module.css'
+// styled components
+import * as S from './styles';
 
 // props
 type TagsProps = {
   tags: string[];
 };
 
-const Tags = ({ tags }: TagsProps) =>
-  tags?.length > 0 && (
-    <small className={styles.tags}>
-      {tags.map((tag) => (
-        <div key={tag} className={styles.tag}>
-          {tag}
-        </div>
-      ))}
-    </small>
-  )
+const Tags = ({ tags }: TagsProps) => (
+  <S.Tags>
+    {tags.map((tag) => (
+      <S.Tag key={tag}>{tag}</S.Tag>
+    ))}
+  </S.Tags>
+);
 
-export default Tags
+export default Tags;

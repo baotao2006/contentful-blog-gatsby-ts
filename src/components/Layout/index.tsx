@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 // types
 import type { ReactNode } from 'react';
 import type { WindowLocation } from '@reach/router';
 
-import './variables.css'
-import './global.css'
-import Seo from '../Seo'
-import Navigation from '../Navigation'
-import Footer from '../Footer'
+// components
+import Footer from '../Footer';
+import Navigation from '../Navigation';
+import Seo from '../Seo';
+
+// styled components
+import GlobalStyle from '../../styles/GlobalStyle';
+import theme from '../../styles/theme';
 
 // props
 type LayoutProps = {
@@ -16,15 +20,14 @@ type LayoutProps = {
   location: WindowLocation;
 };
 
-const Template = ({ children, location  }: LayoutProps) => {
-  return (
-    <>
-      <Seo title='Gatsby Contentful Blog w/ TypeScript' />
-      <Navigation />
-      <main>{children}</main>
-      <Footer />
-    </>
-  )
-}
+const Layout = ({ children, location }: LayoutProps) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <Seo title='Gatsby Contentful Blog w/ TypeScript' />
+    <Navigation />
+    <main className='test'>{children}</main>
+    <Footer />
+  </ThemeProvider>
+);
 
-export default Template
+export default Layout;

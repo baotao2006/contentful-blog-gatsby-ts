@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import type { IGatsbyImageData } from 'gatsby-plugin-image';
 
-import { GatsbyImage } from 'gatsby-plugin-image'
-
-import * as styles from './hero.module.css'
+// styled components
+import * as S from './styles';
 
 // props
 type HeroProps = {
@@ -12,16 +11,16 @@ type HeroProps = {
   title: string;
 };
 
-const Hero = ({ image, title, content }: HeroProps) => (
-  <div className={styles.hero}>
-    {image && (
-      <GatsbyImage className={styles.image} alt={title} image={image} />
-    )}
-    <div className={styles.details}>
-      <h1 className={styles.title}>{title}</h1>
-      {content && <p className={styles.content}>{content}</p>}
-    </div>
-  </div>
-)
+const Hero = ({ content, image, title }: HeroProps) => (
+  <S.Hero>
+    {image ? <S.Image alt={title} image={image} /> : null}
 
-export default Hero
+    <S.Details>
+      <S.Title>{title}</S.Title>
+
+      {content ? <S.Content>{content}</S.Content> : null}
+    </S.Details>
+  </S.Hero>
+);
+
+export default Hero;

@@ -1,10 +1,12 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-import Container from '../Container'
-import Tags from '../Tags'
-import * as styles from './article-preview.module.css'
+// components
+import Tags from '../Tags';
+
+// styled components
+import * as S from './styles';
+import { Container } from '../UI/Container';
 
 // types
 import type { BlogPost } from '../../types/types';
@@ -15,34 +17,30 @@ type ArticlePreviewProps = {
 };
 
 const ArticlePreview = ({ posts }: ArticlePreviewProps) => {
-  if (!posts) return null
-  if (!Array.isArray(posts)) return null
+  if (!posts || !Array.isArray(posts)) return null;
 
   return (
     <Container>
-      <ul className={styles.articleList}>
-        {posts.map((post) => {
-          return (
-            <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
-                <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
-                <h2 className={styles.title}>{post.title}</h2>
-              </Link>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: post.description.childMarkdownRemark.html,
-                }}
-              />
-              <div className={styles.meta}>
-                <small className="meta">{post.publishDate}</small>
-                <Tags tags={post.tags} />
-              </div>
-            </li>
-          )
-        })}
-      </ul>
-    </Container>
-  )
-}
+      <S.ArticleList>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <S.StyledLink to={`/blog/${post.slug}`}>
+              <GatsbyImage alt='' image={post.heroImage.gatsbyImageData} />
+              <S.Title>{post.title}</S.Title>
+            </S.StyledLink>
 
-export default ArticlePreview
+            <div dangerouslySetInnerHTML={{ __html: post.description.childMarkdownRemark.html }} />
+
+            <S.Meta>
+              <small>{post.publishDate}</small>
+
+              {post.tags.length ? <Tags tags={post.tags} /> : null}
+            </S.Meta>
+          </li>
+        ))}
+      </S.ArticleList>
+    </Container>
+  );
+};
+
+export default ArticlePreview;

@@ -1,27 +1,30 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import * as styles from './navigation.module.css'
+// styled components
+import * as S from './styles';
 
 const Navigation = () => (
-  <nav role="navigation" className={styles.container} aria-label="Main">
-    <Link to="/" className={styles.logoLink}>
-      <span className={styles.logo} />
-      <span className={styles.navigationItem}>Gatsby Starter Contentful</span>
-    </Link>
-    <ul className={styles.navigation}>
-      <li className={styles.navigationItem}>
-        <Link to="/" activeClassName="active">
+  <S.Nav role='navigation' aria-label='Main'>
+    <S.LogoLink to='/'>
+      <S.Logo />
+      <span>Gatsby Starter Contentful</span>
+    </S.LogoLink>
+
+    <S.MenuList>
+      <S.MenuItem>
+        <Link to='/' activeClassName='active'>
           Home
         </Link>
-      </li>
-      <li className={styles.navigationItem}>
-        <Link to="/blog/" activeClassName="active">
+      </S.MenuItem>
+
+      <S.MenuItem>
+        <Link to='/blog/' activeClassName='active'>
           Blog
         </Link>
-      </li>
-    </ul>
-  </nav>
-)
+      </S.MenuItem>
+    </S.MenuList>
+  </S.Nav>
+);
 
-export default Navigation
+export default Navigation;
