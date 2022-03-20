@@ -2,7 +2,12 @@ import React from 'react'
 
 import * as styles from './tags.module.css'
 
-const Tags = ({ tags }) =>
+// props
+type TagsProps = {
+  tags: string[];
+};
+
+const Tags = ({ tags }: TagsProps) =>
   tags?.length > 0 && (
     <small className={styles.tags}>
       {tags.map((tag) => (

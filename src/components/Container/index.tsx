@@ -1,6 +1,13 @@
 import React from 'react'
+import type { ReactNode } from 'react';
 
-const Container = ({ children, as = 'div' }) => {
+// props
+type LayoutProps = {
+  children: ReactNode;
+  as: string;
+};
+
+const Container = ({ children, as = 'div' }: LayoutProps) => {
   const Tag = as
 
   return (

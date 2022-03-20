@@ -6,7 +6,15 @@ import Container from '../Container'
 import Tags from '../Tags'
 import * as styles from './article-preview.module.css'
 
-const ArticlePreview = ({ posts }) => {
+// types
+import type { BlogPost } from '../../types/types';
+
+// props
+type ArticlePreviewProps = {
+  posts: BlogPost[];
+};
+
+const ArticlePreview = ({ posts }: ArticlePreviewProps) => {
   if (!posts) return null
   if (!Array.isArray(posts)) return null
 
