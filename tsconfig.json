@@ -1,14 +1,15 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "include": ["./src/**/*"]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "react",
+		"module": "commonjs",
+		"noEmit": true,
+		"pretty": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "es5"
+	},
+	"include": ["./src", "gatsby"],
+	"exclude": ["./node_modules", "./public", "./.cache"]
 }
