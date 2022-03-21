@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import type { GatsbyConfig } from "gatsby"
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
@@ -21,7 +22,7 @@ if (!spaceId || !accessToken) {
 	throw new Error('Contentful spaceId and the access token need to be provided.');
 }
 
-export default {
+const config: GatsbyConfig = {
 	siteMetadata: {
 		title: 'Gatsby Contentful Starter',
 		description: 'Official Contentful Gatsby Starter'
@@ -40,3 +41,5 @@ export default {
 		}
 	]
 };
+export default config;
+
